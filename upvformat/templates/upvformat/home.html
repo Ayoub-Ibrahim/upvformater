@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block content %}
+<main class="container" role="main">
+   <div class="row" data-masonry='{"percentPosition": true }'>
+      <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+              <h5 class="card-header">Home view</h5>
+              <div class="card-body">
+                <h5 class="card-title">General Description of the Project:</h5>
+                <p class="card-text">
+                Use this Web App to convert UPV Markup Language 
+                format into Moodle format, which is widely used in 
+                online learning environments. The application 
+                simplifies the creation of question banks, reducing 
+                the need for extensive coding or complex spreadsheet 
+                manipulation. With a user-friendly interface, 
+                it allows teachers to input questions directly or 
+                upload text files.
+                </p>
+              </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+            <div class="card">
+            <h5 class="card-header">Multi choice</h5>
+                <div class="card-body">
+                  <h5 class="card-title">Multi-Choice Questions:</h5>
+                  <p class="card-text">
+                  <b>Input the Question:</b> 
+                  Enter your multi-choice question 
+                  in the text area, using the UPV syntax.
+                  <br>
+                  <b>Correct and Incorrect Answers:</b> 
+                  indicate which options are correct and which 
+                  are incorrect.
+                  <br>
+                  <b>Convert and Export:</b> 
+                  Click the convert button to generate 
+                  the Moodle format, then download and 
+                  upload the converted file to your Moodle course.
+                  </p>
+                  <a href="{% url "multichoice" %}" class="btn btn-primary">
+                     Multi Choice
+                  </a>
+                </div>
+              </div>
+          </div>
+      <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card">
+                <h5 class="card-header">Numeric</h5>
+                <div class="card-body">
+                  <h5 class="card-title">Numeric Questions:</h5>
+                  <p class="card-text"> 
+                    <b>Enter the Numeric Question:</b>
+                    Write the numeric question in the provided 
+                    text area, following the UPV syntax.
+                    <br>
+                    <b>Define the Correct Answer:</b> 
+                    Specify the correct numerical value or range.
+                    <br>
+                    <b>Generate the Moodle Format:</b> 
+                    Once the format question file is created, 
+                    the file will be download.
+                    <a href="{% url "numeric" %}" class="btn btn-primary">
+                      Numeric
+                    </a>
+                  </p>
+                </div>
+          </div>
+      </div>
+   </div>
+</main>
+{% endblock %}

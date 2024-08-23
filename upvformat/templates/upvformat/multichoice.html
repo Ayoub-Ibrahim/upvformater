@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Multi-Choice{% endblock %}
+{% block content %}
+    <nav class="my-3 ms-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "numeric" %}">Numeric</a></li>      
+        </ol>
+        <p>
+            You can <a href="{% url "edit" %}">edit your account</a>
+          </p>
+    </nav>
+    <h1>Multi choices!</h1>
+    <form  enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        <p><textarea name="text_content" rows="10" cols="80">
+            {{ form.question_text.value }}
+        </textarea></p>
+        {% if form.non_field_errors %}
+        <div class="error">
+            {{ form.non_field_errors }}
+        </div>
+        {% endif %}
+        <p><input type="file" name="file"></p>
+        <input type="submit" value="Convert">
+        <input type="reset">
+    </form>    
+{% endblock %}

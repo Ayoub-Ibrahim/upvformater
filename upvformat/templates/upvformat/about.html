@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title  %}About Me{% endblock %}
+{% block content %}
+    {{ user_form.as_p }}
+    {{ profile_form.as_p }}
+    {% csrf_token %}
+
+    <div class="container">
+        <h1>About</h1>
+        <p>Hello, my name is <strong>[A. I. Alnour]</strong>, and I am a recent graduate with a degree in Computer Science. This project represents the culmination of my academic journey and is my final degree project. Throughout my studies, I have developed a deep passion for software development, particularly in the areas of web application design and educational technology.</p>
+
+        <h2>My Background</h2>
+        <p>During my time as a computer science student, I focused on mastering various programming languages and frameworks, with a special interest in Python and the Django framework. My academic projects and internships have provided me with hands-on experience in developing full-stack web applications, solving complex problems, and working with a range of modern technologies.</p>
+
+        <h2>The Project</h2>
+        <p>This project, titled "<strong>UPV Markup Language to Moodle Converter</strong>," is the result of months of dedication and hard work. It addresses a practical need in the field of e-learning by simplifying the process of creating and converting question banks from the UPV Markup Language to a Moodle-compatible format. The tool I developed aims to save educators time and effort, allowing them to focus more on teaching and less on the technical challenges of exam preparation.</p>
+        
+        <p>The project is designed to be user-friendly, efficient, and highly functional, offering features such as multiple-choice and numeric question conversion, user account management, and easy-to-navigate interfaces. The application leverages the Django framework for back-end development and integrates various third-party tools to enhance its capabilities.</p>
+
+        <h2>My Vision</h2>
+        <p>As I step into the professional world, I aspire to continue building innovative software solutions that have a real impact on people's lives. My experience with this project has further fueled my enthusiasm for educational technology, and I am eager to explore new opportunities in this field.</p>
+
+        <p>I am always open to learning, growing, and collaborating with others who share my passion for technology and education. If you are interested in my work or wish to connect, please feel free to reach out!</p>
+
+        <p>Thank you for taking the time to learn more about me and my project.</p>
+    </div>
+
+{% endblock %}

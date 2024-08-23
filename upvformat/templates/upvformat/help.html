@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title  %}Help{% endblock %}
+{% block content %}
+    <div class="container">
+        <h1>Help - UPV Markup to Moodle Format</h1>
+        <h2>Overview</h2>
+        <p>Welcome to the UPV Markup Language to Moodle Converter 
+            help page. This web application is designed to simplify 
+            the process of converting question banks from the UPV 
+            Markup Language format into Moodle-compatible formats. 
+            It reduces the need for complex coding or spreadsheet 
+            manipulation, offering a straightforward and user-friendly 
+            interface for educators.</p>
+        
+        <h2>General Description</h2>
+        <p>This web application allows educators to efficiently convert question banks from the UPV Markup Language format into Moodle-compatible formats. It streamlines the process, reducing the need for complex coding or spreadsheet use, and offers a simple, user-friendly interface for easy question conversion.</p>
+
+        <h2>Getting Started</h2>
+        <ol>
+            <li><strong>Login or Create an Account:</strong> Before you can start converting your questions, ensure you are logged into the application. If you don’t have an account, create one using your email and a secure password.</li>
+            <li><strong>Accessing the Conversion Tool:</strong> Once logged in, navigate to the main dashboard where you can access the conversion tool for both multiple-choice and numeric questions.</li>
+            <li><strong>Inputting Questions:</strong> Use the provided text areas to input your questions using the UPV Markup Language syntax. You can also upload a text file containing multiple questions if preferred.</li>
+        </ol>
+        {{ user_form.as_p }}
+        {{ profile_form.as_p }}
+        {% csrf_token %}
+        <h2>Tips for Efficient Use</h2>
+        <ul>
+            <li><strong>Check Syntax:</strong> Before converting, ensure your questions are formatted correctly according to the UPV Markup Language syntax. This will prevent errors during the conversion process.</li>
+            <li><strong>Use Bulk Upload:</strong> If you have multiple questions, consider using the bulk upload feature to save time. Prepare your questions in a single text file and upload them directly.</li>
+            <li><strong>Preview Converted Questions:</strong> After conversion, preview your questions in Moodle format to verify accuracy before downloading or uploading them to your Moodle course.</li>
+        </ul>
+
+        <h2>Common Issues & Troubleshooting</h2>
+        <ul>
+            <li><strong>Incorrect Formatting:</strong> If your converted questions don’t appear as expected, double-check the original UPV Markup Language formatting for errors or missing tags.</li>
+            <li><strong>Conversion Errors:</strong> In case of an error during conversion, try refreshing the page or re-uploading your file. If the issue persists, contact support.</li>
+            <li><strong>Account Issues:</strong> If you encounter any problems with your account, such as login difficulties or password reset issues, use the ‘Forgot Password’ feature or reach out to customer support for assistance.</li>
+        </ul>
+    </div>
+{% endblock %}
